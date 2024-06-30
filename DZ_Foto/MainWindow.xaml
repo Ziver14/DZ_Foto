@@ -1,0 +1,79 @@
+﻿<Window x:Class="DZ_Foto.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DZ_Foto"
+        mc:Ignorable="d"
+        Title="Агенство фотографий" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150*" />
+            <ColumnDefinition Width="383*" />
+            <ColumnDefinition Width="267*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <Viewbox>
+                <TextBlock FontSize="20" Foreground="DarkGray" FontFamily="Impact">Наши лучшие работы</TextBlock>
+            </Viewbox>
+            <ScrollViewer Height="450" VerticalScrollBarVisibility="Visible">
+                <StackPanel>
+                    <Image Source="Resources\1.jpg" MaxHeight="150px"/>
+                    <TextBlock FontSize="20" HorizontalAlignment="Center" FontWeight="Black">Игорь</TextBlock>
+                    <Image Source="Resources\2.jpg" MaxHeight="150px"/>
+                    <TextBlock FontSize="20" HorizontalAlignment="Center" FontWeight="Black">Елена</TextBlock>
+                    <Image Source="Resources\3.jpg" MaxHeight="150px"/>
+                    <TextBlock FontSize="20" HorizontalAlignment="Center" FontWeight="Black">Анна</TextBlock>
+                    <Image Source="Resources\4.jpg" MaxHeight="150px"/>
+                    <TextBlock FontSize="20" HorizontalAlignment="Center" FontWeight="Black">Валерия</TextBlock>
+                    <Image Source="Resources\5.jpg" MaxHeight="150px"/>
+                    <TextBlock FontSize="20" HorizontalAlignment="Center" FontWeight="Black">Николай</TextBlock>
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+        <TabControl Grid.Column="1" Grid.ColumnSpan="2" FontSize="16">
+            <TabItem Header="Инструменты">
+                <StackPanel>
+            <Menu FontSize="14">
+                <MenuItem Header="Файл">
+                    <MenuItem Header="Новый"/>
+                    <MenuItem Header="Открыть"/>
+                </MenuItem>
+                <MenuItem Header="Редактировать">
+                    <MenuItem Header="Обрезать">
+                        <MenuItem Header="Обрезать квадрат"/>
+                        <MenuItem Header="Произвольная обрезка"/>
+                    </MenuItem>
+                    <MenuItem Header="Изменить цвет"/>
+                </MenuItem>
+            </Menu>
+            <TextBlock FontFamily="Impact" FontSize="20">Услуги</TextBlock>
+            <ListBox BorderBrush="White">
+                <TextBlock FontSize="16">Фотография</TextBlock>
+                <TextBlock FontSize="16">Ретуширование</TextBlock>
+                <TextBlock FontSize="16">Исправление недостатков</TextBlock>
+                <TextBlock FontSize="16">Изменение фона</TextBlock>
+                <ListBox.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Редактировать" FontSize="14"/>
+                        <MenuItem Header="Удалить" FontSize="14"/>
+                        <MenuItem Header="Создать на основе" FontSize="14"/>
+                    </ContextMenu>
+                </ListBox.ContextMenu>
+            </ListBox>
+             </StackPanel>
+            </TabItem>
+            <TabItem Header="Расписание"/>
+        </TabControl>
+        <Viewbox Grid.Column="2" VerticalAlignment="Top">
+            <Calendar/>
+        </Viewbox>
+
+
+                
+
+
+
+
+    </Grid>
+</Window>
